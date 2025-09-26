@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite Donkeys</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="script.js" defer="true"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search"
+    />
+  </head>
+  <body>
+    <h1>Infinite Scroll with the Metropolitan Museum of Art Collection API</h1>
+    <div class="loader" id="loader">
+      <img src="loading.svg" alt="loading animation" />
+    </div>
+    <div class="error" id="error" hidden>
+      <h2>
+        Oh no, that didn't work as expected. 😔<br />This is just a little Demo,
+        so it's a bit buggy. <br />Either try again or try using a different
+        search term.
+      </h2>
+    </div>
+    <div class="search-container">
+      <div class="wrap">
+        <div class="search">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="sunflower"
+            id="search-input"
+          />
+          <button type="submit" class="search-button" id="search-button">
+            <i><span class="material-symbols-outlined"> search </span></i>
+          </button>
+        </div>
+      </div>
+      <p>
+        Enter a search term and click the Button to show related pictures. ☺️
+      </p>
+    </div>
+    <div class="image-container" id="image-container"></div>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "League Gothic", sans-serif;
+}
+
+@layer search {
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+
+  .search-input {
+    width: 100%;
+    border: 3px solid #00b4cc;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9dbfaf;
+  }
+
+  .search-input:focus {
+    color: #00b4cc;
+  }
+
+  .search-input::placeholder {
+    color: lightgray;
+  }
+
+  .search-button {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00b4cc;
+    background: #00b4cc;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  /*Resize the wrap to see the search bar change!*/
+  .wrap {
+    width: 30%;
+  }
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      font-size: 25px;
+    }
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 25px;
+  letter-spacing: 0.25rem;
+  margin-bottom: 25px;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(230, 233, 239, 0.8);
+  img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.error {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(230, 233, 239, 0.8);
+  h2 {
+    position: fixed;
+    font-size: 3rem;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.image-container {
+  margin: 0 20% 20px 20%;
+}
+
+.image-container img {
+  width: 100%;
+  margin-top: 10px;
+}
+.image-container img:first-child {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 40px;
+    letter-spacing: 0.2rem;
+  }
+  .image-container {
+    margin: 0 10% 10px 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+    letter-spacing: 0.15rem;
+  }
+  .image-container {
+    margin: 0 20px 10px 20px;
+  }
+}
+
+figure {
+  border: thin silver solid;
+  margin: 0.5em;
+  padding: 0.5em;
+  text-align: center;
+  font-size: larger;
+  text-indent: 0;
+}
+figure img {
+  width: 100%;
+}

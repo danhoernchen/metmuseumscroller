@@ -1,6 +1,6 @@
 const count = 30;
 const loadingContainer = document.getElementById("loader");
-const baseUrl = "http://metmuseumscroll.onrender.com:8088";
+const baseUrl = "https://metmuseumscroll.onrender.com:8088";
 const imageContainer = document.getElementById("image-container");
 const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("search-button");

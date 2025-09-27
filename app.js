@@ -15,9 +15,6 @@ const port = process.env.PORT || 8088;
 //   res.send("Hello World!");
 // });
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
 app.get("/style.css", (req, res) => {
   res.setHeader("Content-Type", "text/css");
   res.sendFile(path.join(__dirname, "style.css"));
@@ -49,6 +46,9 @@ app.get("/objects/:id", (req, res) => {
     .get(backendUrl)
     .then((response) => res.send(response.data))
     .catch((error) => res.send({ failedWith: error }));
+});
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // console text when app is running

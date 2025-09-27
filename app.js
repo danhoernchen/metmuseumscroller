@@ -34,6 +34,7 @@ app.get("/search/:id", (req, res) => {
   // replace with a custom URL as required
   const backendUrl = `https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&q=${req.params.id}`;
   // return the data without modification
+  console.log(req.params.id);
   axios
     .get(backendUrl)
     .then((response) => res.send(response.data))
@@ -52,5 +53,5 @@ app.get("/objects/:id", (req, res) => {
 
 // console text when app is running
 app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}`);
+  console.log(`Server listening on port ${port}`);
 });
